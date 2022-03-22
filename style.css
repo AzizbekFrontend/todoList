@@ -1,0 +1,180 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none;
+    overflow: hidden;
+}
+body{
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('photo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.caption{
+    position: absolute;
+    top: 30px;
+    left: 40%;
+    font-size: 40px;
+    color:#f4f4f4;
+}
+.container{
+    max-width: 1100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+.form-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.form-input{
+width: 350px;
+padding: 8px 4px;
+font-size: 1.2rem;
+
+}
+.add-btn{
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 2px solid #f4f4f4;
+    color: #000;
+    background-color: transparent;
+    background-color:transparent;
+    transition: all 0.3s    ;
+}
+.add-btn:hover{
+    background-color:rgb(31,129,221);
+    border-color:rgb(31,129,221);
+}
+
+.list-contaiener{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.todos{
+    height: 50vh;
+    background-color:rgba(0,0,0,0.5);
+    padding: 2rem;
+    overflow-y: scroll;
+    width: 400px;
+}
+.todo{ 
+    color:#222;
+    background-color:#fff;
+    display: flex;
+    font-size: 22px;
+    padding: 0.2rem 1.2rem;
+    align-items:center;
+    transition: 0.3s;
+    transform-origin: left top;
+
+}
+.todo:not(:last-child){
+    margin-bottom: 20px;
+}                       
+.todo-text{
+    margin-left: auto;
+    width: 100%;
+}
+.check-btn,
+ .trash-btn{
+    border:0;
+    color:#fff;
+    cursor: pointer;
+}
+.fas{
+    pointer-events: none;
+}
+
+.check-btn{
+    background-color:green;
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 20px;
+
+}
+.fa-check{ }
+
+.trash-btn{
+    background-color:tomato;
+    padding: 5px;
+    border-radius:3px
+}
+.fa-trash{}
+
+.done{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.hidden{
+opacity: 0;
+transform: rotate(45deg );
+}
+
+@media (max-width:860px){
+    html{
+        overflow: hidden;
+    }
+    .caption{
+        position: static;
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .container{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .form-container{
+        height: 30vh;
+    }
+    .list-contaiener{
+        height: 60vh;
+    }
+}
+
+
+.modal{
+    /* display: none; */
+    position: absolute;
+    border:2px solid rgba(171, 204, 206, 0.603);
+    width: 400px;
+    height: 16vh;
+    background-color:rgba(171, 204, 206, 0.603);
+    margin: 0 auto;
+    margin-top: 78px ;
+
+}
+.modal-container p {
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+    margin-top:28px;
+    font-size: 30px;
+    
+
+}
+
+.hidden {
+    display: hidden;
+}
